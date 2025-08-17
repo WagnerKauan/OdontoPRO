@@ -1,0 +1,46 @@
+export type PlanDeTailsProps = {
+  maxServices: number;
+};
+
+export type PlansProps = {
+  BASIC: PlanDeTailsProps;
+  PROFESSIONAL: PlanDeTailsProps;
+};
+
+export const PLANS: PlansProps = {
+  BASIC: {
+    maxServices: 3,
+  },
+  PROFESSIONAL: {
+    maxServices: 50,
+  },
+};
+
+export const subscriptionPlans = [
+  {
+    id: "BASIC",
+    name: "Basic",
+    description: "Perfeito para clínicas menores.",
+    oldPrice: "R$ 107,90",
+    price: "R$ 59,90",
+    features: [
+      `Até ${PLANS.BASIC.maxServices} serviços`,
+      "Agendamentos ilimitados",
+      "Suporte",
+      "Relatórios",
+    ],
+  },
+  {
+    id: "PROFESSIONAL",
+    name: "Professional",
+    description: "Perfeito para clínicas grandes.",
+    oldPrice: "R$ 199,90",
+    price: "R$ 149,90",
+    features: [
+      `Até ${PLANS.PROFESSIONAL.maxServices} serviços`,
+      "Agendamentos ilimitados",
+      "Suporte prioritário",
+      "Relatórios avançados",
+    ],
+  },
+];
